@@ -26,11 +26,18 @@ export default function RootLayout() {
   if (!loaded) {
     return null;
   }
+  
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="(Drawer)" options={{
+          headerShown: false,
+        }}/>
+        <Stack.Screen name="Drawer2" options={{
+          headerShown: false,
+        }} />
+        {/* <Stack.Screen name="tabs"  /> */}
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />
